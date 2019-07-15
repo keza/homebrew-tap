@@ -1,7 +1,7 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
-class deneme < Formula
+class Deneme < Formula
   desc "sdfasdfas"
   homepage ""
   url "https://github.com/keza/homebrew-deneme/archive/v0.0.1.tar.gz"
