@@ -1,12 +1,29 @@
-class Deneme < Formula
-  desc "deneme program golang"
-  homepage "https://github.com/keza/homebrew-deneme"
-  version "v0.0.1"
 
-    url "https://github.com/keza/homebrew-deneme/releases/download/v0.0.1/homebrew-deneme_0.0.1_darwin_amd64.tar.gz"
-    sha256 "d3fa9491b7eb186a0e98747d1e9558369cbe32b7385b92a776618980e4d2a9a5"
+# Documentation: https://docs.brew.sh/Formula-Cookbook
+#                https://rubydoc.brew.sh/Formula
+# PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+class deneme < Formula
+  desc "sdfasdfas"
+  homepage ""
+  url "https://github.com/keza/homebrew-deneme/archive/v0.0.1.tar.gz"
+  sha256 "48d5f5e89bfe0a25c6f546942261ca88d38dd77be80c40ba179dff9db610a42f"
+  depends_on "go" => :build
 
-  def install
-    bin.install "deneme"
-  end
+ def install
+   ENV["GOPATH"] = buildpath
+
+   bin_path = buildpath/"src/github.com/keza/deneme"
+   # Copy all files from their current location (GOPATH root)
+   # to $GOPATH/src/github.com/kevinburke/hostsfile
+   bin_path.install Dir["*"]
+   cd bin_path do
+     # Install the compiled binary into Homebrew's `bin` - a pre-existing
+     # global variable
+     system "go", "build", "-o", bin/"deneme", "."
+   end
+ end
+
+ test do
+       system "#{bin}/deneme"
+     end
 end
