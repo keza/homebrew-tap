@@ -1,6 +1,8 @@
 # Documentation: https://docs.brew.sh/Formula-Cookbook
 #                https://rubydoc.brew.sh/Formula
 # PLEASE REMOVE ALL GENERATED COMMENTS BEFORE SUBMITTING YOUR PULL REQUEST!
+# https://kevin.burke.dev/kevin/install-homebrew-go/
+# https://zlypher.github.io/posts/golang-github-release-with-goreleaser
 class Deneme < Formula
   desc "sdfasdfas"
   homepage ""
